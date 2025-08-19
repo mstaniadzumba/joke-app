@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './App.css';
 
 function App() {
   const [joke, setJoke] = useState('');
@@ -14,10 +15,14 @@ function App() {
   }, []);
 
   return (
-    <div style={{ padding: '20px' }}>
+    <div className="app">
       <h1>Random Joke Generator</h1>
-      <button onClick={fetchJoke}>Get Joke</button>
-      <p>{joke}</p>
+      <div className="joke-box">
+        <p>{joke}</p>
+      </div>
+      <button className="joke-button" onClick={fetchJoke}>
+        Get Joke
+      </button>
     </div>
   );
 }
