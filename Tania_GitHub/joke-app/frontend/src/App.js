@@ -5,7 +5,7 @@ function App() {
   const [joke, setJoke] = useState('');
 
   const fetchJoke = async () => {
-    const response = await fetch('http://127.0.0.1:5000/joke'); // your Flask endpoint
+    const response = await fetch('joke-env.eba-x38rg4fz.us-east-1.elasticbeanstalk.com/joke');
     const data = await response.json();
     setJoke(`${data.setup} ${data.punchline}`);
   };
