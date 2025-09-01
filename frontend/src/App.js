@@ -5,7 +5,7 @@ function App() {
   const [joke, setJoke] = useState('');
 
   const fetchJoke = async () => {
-    const response = await fetch('https://joke-app-4.onrender.com');
+    const response = await fetch('https://joke-app-4.onrender.com/joke');
     const data = await response.json();
     setJoke(`${data.setup} ${data.punchline}`);
   };
